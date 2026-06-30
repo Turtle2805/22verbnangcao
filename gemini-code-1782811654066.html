@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập Reported Speech - Ms Lê Hằng English</title>
+    <!-- Google Fonts: Quicksand mang lại cảm giác tròn trịa, thân thiện với học sinh -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(-45deg, #8854C0, #FDCB6E, #00C9A7, #FF7675);
+            --primary-color: #8854C0;
+            --yellow-color: #FDCB6E;
+            --turquoise-color: #00C9A7;
+            --correct-color: #00D26A;
+            --correct-shadow: #00A352;
+            --wrong-color: #FF4757;
+            --wrong-shadow: #D63031;
+            --card-bg: rgba(255, 255, 255, 0.96);
+            --text-main: #2D3436;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: var(--primary-gradient);
+            background-size: 400% 400%;
+            animation: gradientMove 12s ease infinite;
+            position: relative;
+            overflow-x: hidden;
+            padding: 25px 12px;
+            color: var(--text-main);
+        }
+
+        /* Hiệu ứng chuyển động loang màu nền cực mượt */
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Lớp họa tiết SVG hoa văn vui nhộn lơ lửng độc lập */
+        .bg-patterns {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.15;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M15 15h2v2h-2v-2zm0 4h2v2h-2v-2zm-4-4h2v2h-2v-2zm0 4h2v2h-2v-2zm-4-4h2v2H7v-2zm0 4h2v2H7v-2zm0-8h2v2H7V7zm4 0h2v2h-2V7zm4 0h2v2h-2V7zm28 0h2v2h-2V7zm4 0h2v2h-2V7zm4 0h2v2h-2V7zm-8 4h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-20 28h2v2h-2v-2zm0 4h2v2h-2v-2zm-4-4h2v2h-2v-2zm0 4h2v2h-2v-2zm-4-4h2v2H7v-2zm0 4h2v2H7v-2zm0-8h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm28 0h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2h-2v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z'/%3E%3C/g%3E%3C/svg%3E");
+            animation: patternFloat 40s linear infinite;
+        }
+
+        @keyframes patternFloat {
+            0% { background-position: 0 0; }
+            100% { background-position: 80px 80px; }
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Tiêu đề gọn gàng, không chiếm diện tích */
+        header {
+            text-align: center;
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 16px;
+            border-radius: 15px;
+            box-shadow: 0 4px 0 rgba(0,0,0,0.1);
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+            position: relative;
+        }
+        .author-tag {
+            font-size: 1rem;
+            font-weight: 900;
+            color: #6c5ce7;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Khung thông báo nhắc nhở cực kỳ quan trọng */
+        .notice-box {
+            background: #FFEAA7;
+            border: 3.5px dashed #FF9F43;
+            border-radius: 20px;
+            padding: 16px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 0 #FAB1A0;
+            text-align: center;
+            animation: pulseNotice 2s infinite alternate;
+        }
+        @keyframes pulseNotice {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.01); }
+        }
+        .notice-title {
+            color: #D63031;
+            font-weight: 900;
+            font-size: 1.15rem;
+            margin-bottom: 6px;
+        }
+        .notice-content {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #2D3436;
+            font-weight: 700;
+        }
+
+        /* Tiêu đề phân khu bài tập */
+        .section-title {
+            background: #fff;
+            color: var(--primary-color);
+            padding: 12px 20px;
+            border-radius: 16px;
+            margin: 30px 0 15px 0;
+            font-weight: 900;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 0 rgba(0,0,0,0.08);
+            border-left: 6px solid var(--primary-color);
+        }
+        .verb-pool {
+            background: #E8F5E9;
+            border: 2px solid var(--correct-color);
+            padding: 12px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #1B5E20;
+            font-size: 0.95rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            box-shadow: 0 4px 0 rgba(0,0,0,0.05);
+        }
+        .verb-tag {
+            background: #FFF;
+            padding: 3px 10px;
+            border-radius: 8px;
+            border: 1px solid #A5D6A7;
+            box-shadow: 0 2px 0 #A5D6A7;
+            font-weight: 900;
+        }
+
+        /* Thẻ câu hỏi kiểu dáng Duolingo */
+        .quiz-card {
+            background: var(--card-bg);
+            border-radius: 22px;
+            padding: 22px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 0 rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+            border: 3px solid #FFF;
+        }
+
+        .question-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .badge {
+            background: var(--primary-color);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-weight: 900;
+            font-size: 0.85rem;
+            margin-right: 12px;
+            white-space: nowrap;
+            box-shadow: 0 3px 0 #6c5ce7;
+            margin-top: 2px;
+        }
+        .question-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.5;
+            color: #2D3436;
+        }
+
+        /* Hệ thống các nút chọn đáp án 3D */
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .option-btn {
+            background: #FFFFFF;
+            border: 3px solid #E2E8F0;
+            border-radius: 18px;
+            padding: 14px 20px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.1s ease;
+            box-shadow: 0 6px 0 #E2E8F0;
+            color: #4A5568;
+        }
+        .option-btn:hover:not(.disabled) {
+            transform: translateY(-2px) scale(1.005);
+            box-shadow: 0 8px 0 #CBD5E1;
+            border-color: #CBD5E1;
+            color: #1A202C;
+        }
+        .option-btn:active:not(.disabled) {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 #CBD5E1;
+        }
+        
+        /* Trạng thái Đúng/Sai trực quan */
+        .option-btn.correct {
+            background-color: var(--correct-color) !important;
+            color: white !important;
+            border-color: var(--correct-shadow) !important;
+            box-shadow: 0 3px 0 var(--correct-shadow) !important;
+        }
+        .option-btn.wrong {
+            background-color: var(--wrong-color) !important;
+            color: white !important;
+            border-color: var(--wrong-shadow) !important;
+            box-shadow: 0 3px 0 var(--wrong-shadow) !important;
+        }
+        .option-btn.disabled {
+            cursor: not-allowed;
+            opacity: 0.85;
+        }
+
+        /* Khung giải thích siêu chi tiết tự động hiện ra */
+        .explanation-box {
+            margin-top: 20px;
+            background: #FFFDF0;
+            border-left: 6px solid #F1C40F;
+            border-radius: 14px;
+            padding: 18px;
+            display: none;
+            animation: slideDownReveal 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+        }
+        @keyframes slideDownReveal {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .exp-title {
+            font-weight: 900;
+            color: #B33771;
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .exp-section {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            line-height: 1.55;
+        }
+        .exp-section strong {
+            color: #2C3A47;
+        }
+        .sub-options-desc {
+            margin-left: 10px;
+            border-left: 2px dashed #CBD5E1;
+            padding-left: 12px;
+            margin-top: 6px;
+            background: rgba(0,0,0,0.01);
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+
+        /* Hiệu ứng rung lắc khi làm sai */
+        .shake {
+            animation: shakeWidget 0.4s ease-in-out;
+        }
+        @keyframes shakeWidget {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-8px); }
+            40%, 80% { transform: translateX(8px); }
+        }
+
+        /* Khu vực nút nộp bài cuối trang */
+        .submit-container {
+            text-align: center;
+            margin: 40px 0 6px 0;
+        }
+        .main-submit-btn {
+            background: #00D26A;
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 900;
+            padding: 16px 45px;
+            border: none;
+            border-radius: 22px;
+            cursor: pointer;
+            box-shadow: 0 8px 0 #00A352, 0 12px 24px rgba(0,0,0,0.15);
+            transition: all 0.15s;
+        }
+        .main-submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 11px 0 #00A352, 0 14px 28px rgba(0,0,0,0.2);
+        }
+        .main-submit-btn:active {
+            transform: translateY(6px);
+            box-shadow: 0 2px 0 #00A352;
+        }
+
+        /* Hệ thống cửa sổ Popup kết quả */
+        .popup-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            display: flex; justify-content: center; align-items: center;
+            z-index: 1000; visibility: hidden; opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .popup-box {
+            background: white; border-radius: 26px; padding: 30px;
+            max-width: 520px; width: 92%; text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            transform: scale(0.8); transition: all 0.3s ease;
+            border: 6px solid var(--primary-color);
+        }
+        .popup-overlay.show { visibility: visible; opacity: 1; }
+        .popup-overlay.show .popup-box { transform: scale(1); }
+        .score-num { font-size: 3.8rem; font-weight: 900; color: var(--primary-color); margin: 15px 0; text-shadow: 2px 2px rgba(0,0,0,0.05); }
+        .teacher-comment { background: #F8F9FA; padding: 16px; border-radius: 16px; font-weight: 700; color: #2D3436; margin-bottom: 22px; line-height: 1.6; border: 1px solid #E2E8F0; }
+        .restart-btn { background: var(--turquoise-color); color: white; border: none; padding: 12px 30px; font-weight: 900; border-radius: 16px; box-shadow: 0 5px 0 #00A88F; cursor: pointer; font-size: 1.05rem; }
+        .restart-btn:active { transform: translateY(3px); box-shadow: 0 2px 0 #00A88F; }
+
+        #confetti-canvas {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-patterns"></div>
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="container">
+        
+        <header>
+            <div class="author-tag">Giáo viên tạo: Ms Lê Hằng English</div>
+        </header>
+
+        <div class="notice-box">
+            <div class="notice-title">⚠️ LỜI NHẮC CỰC KỲ QUAN TRỌNG ⚠️</div>
+            <div class="notice-content">
+                Chỉ có đọc kỹ giải thích ngay sau mỗi câu, sau đó ghi lại từ vựng/cấu trúc mới vào vở để học thì mới thực sự giỏi lên.<br>
+                Làm cho xong mà không đọc giải thích hay đọc qua loa không ghi chép thì chỉ tốn thời gian vô ích!<br>
+                <strong>* Kéo tới đâu, làm tới đó! *</strong>
+            </div>
+        </div>
+
+        <!-- SECTION I: CHOOSE APPROPRIATE REPORTING VERB -->
+        <div class="section-title">I. Choosing the most appropriate reporting verb and complete the sentences.</div>
+        
+        <!-- TASK 1 -->
+        <div class="section-title" style="margin-top:10px; font-size:1.1rem; background:#FFFCEB;">TASK 1</div>
+        <div class="verb-pool">
+            <span class="verb-tag">threaten</span> <span class="verb-tag">accuse</span> <span class="verb-tag">suggest</span> 
+            <span class="verb-tag">boast</span> <span class="verb-tag">insist</span> <span class="verb-tag">estimate</span> 
+            <span class="verb-tag">beg</span> <span class="verb-tag">apologize</span> <span class="verb-tag">confirm</span> <span class="verb-tag">remind</span>
+        </div>
+        <div id="task1-wrapper"></div>
+
+        <!-- TASK 2 -->
+        <div class="section-title" style="background:#FFFCEB;">TASK 2</div>
+        <div class="verb-pool">
+            <span class="verb-tag">assure</span> <span class="verb-tag">blame</span> <span class="verb-tag">deny</span> 
+            <span class="verb-tag">warn</span> <span class="verb-tag">thank</span> <span class="verb-tag">admit</span> 
+            <span class="verb-tag">refuse</span> <span class="verb-tag">congratulate</span> <span class="verb-tag">add</span> 
+            <span class="verb-tag">point out</span> <span class="verb-tag">agree</span> <span class="verb-tag">advise</span>
+        </div>
+        <div id="task2-wrapper"></div>
+
+        <!-- SECTION II: SENTENCE TRANSFORMATION -->
+        <div class="section-title">II. Complete the second sentence so that it means the same as the first one (Use 3-8 words including the word given).</div>
+        <div id="section2-wrapper"></div>
+
+        <!-- Submit Panel -->
+        <div class="submit-container">
+            <button class="main-submit-btn" onclick="checkFinalQuizResults()">🎉 Nộp Bài Tổng Kết Điểm 🎉</button>
+        </div>
+
+    </div>
+
+    <!-- Modal Popup Dynamic End Report -->
+    <div class="popup-overlay" id="result-modal">
+        <div class="popup-box">
+            <h2 style="color: #6c5ce7;">🌟 Kết Quả Bài Làm Của Con 🌟</h2>
+            <div class="score-num" id="score-text">0 / 0</div>
+            <div class="teacher-comment" id="comment-text">Nhận xét từ cô giáo...</div>
+            <button class="restart-btn" onclick="resetQuizEngine()">Làm Lại Đề Thi 🔄</button>
+        </div>
+    </div>
+
+    <script>
+        // Cơ sở dữ liệu chứa 100% nội dung câu hỏi gốc không bị cắt xén, được chuyển sang trắc nghiệm ABCD trực quan
+        const masterQuizData = [
+            // TASK 1 (Q1 - Q10)
+            {
+                id: 1,
+                task: 1,
+                prompt: "‘I’ve had better marks than anyone else all term!'",
+                options: [
+                    { key: "A", text: "He boasted about having better marks than anyone else all term." },
+                    { key: "B", text: "He insisted on having better marks than anyone else all term." },
+                    { key: "C", text: "He reminded us that he had better marks than anyone else all term." },
+                    { key: "D", text: "He apologized for having better marks than anyone else all term." }
+                ],
+                correctKey: "A",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Tớ đã đạt điểm cao hơn bất kỳ ai khác trong suốt học kỳ này!'",
+                    vocab: [
+                        "A. boast about + V-ing: khoe khoang, tự cao tự đại về điều gì.",
+                        "B. insist on + V-ing: khăng khăng, đòi bằng được việc gì.",
+                        "C. remind + sb + to-V/that...: nhắc nhở ai đó làm gì / rằng...",
+                        "D. apologize for + V-ing: xin lỗi vì hành vi nào đó."
+                    ],
+                    whyCorrect: "Hành động khoe bản thân có điểm cao hơn tất cả mọi người thể hiện rõ tính chất khoe khoang, do đó động từ 'boast' phản ánh chính xác nhất sắc thái câu nói.",
+                    whyIncorrect: "Các động từ còn lại như 'insist' (khăng khăng), 'remind' (nhắc nhở), hay 'apologize' (xin lỗi) hoàn toàn sai lệch ngữ cảnh tự mãn của câu nói ban đầu."
+                }
+            },
+            {
+                id: 2,
+                task: 1,
+                prompt: "‘You did it! I saw you! You stole my watch!'",
+                options: [
+                    { key: "A", text: "He threatened to steal my watch because he saw me." },
+                    { key: "B", text: "He accused me of stealing his watch." },
+                    { key: "C", text: "He denied stealing his watch in front of me." },
+                    { key: "D", text: "He blamed me to steal his watch." }
+                ],
+                correctKey: "B",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Cậu đã làm việc đó! Tớ đã nhìn thấy cậu! Cậu đã lấy trộm đồng hồ của tớ!'",
+                    vocab: [
+                        "A. threaten to-V: đe dọa sẽ làm gì.",
+                        "B. accuse sb of + V-ing: buộc tội/tố cáo ai đã làm việc gì xấu.",
+                        "C. deny + V-ing: phủ nhận đã làm gì.",
+                        "D. blame sb for + V-ing: đổ lỗi cho ai (Đáp án D sai ngữ pháp vì dùng 'blame me to steal')."
+                    ],
+                    whyCorrect: "Câu gốc đưa ra lời khẳng định chắc nịch để bắt lỗi đối phương ('You did it! You stole...'). Do đó cấu trúc buộc tội 'accuse someone of V-ing' hoàn toàn thích hợp.",
+                    whyIncorrect: "A mang nghĩa ngược (đe dọa trộm). C trái ngược sắc thái (phủ nhận). D sử dụng sai cấu trúc ngữ pháp vì động từ 'blame' phải đi với giới từ 'for'."
+                }
+            },
+            {
+                id: 3,
+                task: 1,
+                prompt: "‘If you don't give me your money, I'll hit you!'",
+                options: [
+                    { key: "A", text: "He begged me to give him my money before hitting me." },
+                    { key: "B", text: "He suggested giving him the money or he would hit me." },
+                    { key: "C", text: "He accused me of not giving him his money." },
+                    { key: "D", text: "He threatened to hit me if I didn't give him my money." }
+                ],
+                correctKey: "D",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Nếu mày không đưa tiền cho tao, tao sẽ đánh mày!'",
+                    vocab: [
+                        "A. beg sb to-V: van xin ai làm gì.",
+                        "B. suggest + V-ing: gợi ý làm gì.",
+                        "C. accuse sb of + V-ing: buộc tội ai làm gì.",
+                        "D. threaten to-V: đe dọa sẽ làm gì."
+                    ],
+                    whyCorrect: "Mẫu câu giả định điều kiện chứa hành động bạo lực 'I'll hit you' thể hiện một lời đe dọa trực tiếp nhằm mục đích cưỡng đoạt tài sản. Vì thế động từ 'threaten' là chuẩn xác nhất.",
+                    whyIncorrect: "A sai sắc thái vì đây không phải lời cầu xin lịch sự. B sai vì đây là ép buộc chứ không phải gợi ý thảo luận. C sai ngữ cảnh."
+                }
+            },
+            {
+                id: 4,
+                task: 1,
+                prompt: "‘I'm very sorry I didn't get round to writing earlier.'",
+                options: [
+                    { key: "A", text: "He apologized for not getting round to writing earlier." },
+                    { key: "B", text: "He denied getting round to writing earlier." },
+                    { key: "C", text: "He confirmed that he didn't get round to writing earlier." },
+                    { key: "D", text: "He boasted about writing early to me." }
+                ],
+                correctKey: "A",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Tớ rất xin lỗi vì đã không sắp xếp được thời gian để viết thư sớm hơn.'",
+                    vocab: [
+                        "A. apologize for + V-ing: xin lỗi vì đã làm/không làm điều gì.",
+                        "B. deny + V-ing: phủ nhận làm gì.",
+                        "C. confirm that: xác nhận thông tin gì.",
+                        "D. boast about: khoe khoang."
+                    ],
+                    whyCorrect: "Cụm từ mở đầu 'I'm very sorry' chỉ ra đây là lời xin lỗi. Áp dụng công thức: 'apologize (to sb) for (not) V-ing'. Cụm 'get round to V-ing' mang ý nghĩa xoay xở thời gian để làm gì.",
+                    whyIncorrect: "Các đáp án khác không chứa đựng sắc thái ăn năn, tạ lỗi của từ 'sorry' trong câu gốc."
+                }
+            },
+            {
+                id: 5,
+                task: 1,
+                prompt: "‘Why don't we all go for a drive in the country?'",
+                options: [
+                    { key: "A", text: "He insisted on going for a drive in the country." },
+                    { key: "B", text: "He suggested going for a drive in the country." },
+                    { key: "C", text: "He reminded us to go for a drive in the country." },
+                    { key: "D", text: "He confirmed going for a drive in the country." }
+                ],
+                correctKey: "B",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Tại sao tất cả chúng ta không đi lái xe dạo chơi ở vùng nông thôn nhỉ?'",
+                    vocab: [
+                        "A. insist on + V-ing: khăng khăng, ép buộc làm gì.",
+                        "B. suggest + V-ing: đề nghị, gợi ý, rủ rê cùng làm gì.",
+                        "C. remind sb to-V: nhắc nhở ai nhớ làm gì.",
+                        "D. confirm + V-ing/that: xác nhận một sự thật nào đó."
+                    ],
+                    whyCorrect: "Cấu trúc câu hỏi bắt đầu bằng 'Why don't we...?' là cấu trúc kinh điển dùng để đưa ra lời gợi ý hoặc rủ rê mọi người tham gia một hoạt động tập thể. Động từ 'suggest' là đáp án hoàn hảo.",
+                    whyIncorrect: "A mang tính áp đặt quá mức. C dùng khi việc đã lên kế hoạch từ trước và cần nhắc nhở. D sai nghĩa."
+                }
+            },
+            {
+                id: 6,
+                task: 1,
+                prompt: "‘I must, I simply must see the manager at once!'",
+                options: [
+                    { key: "A", text: "He estimated seeing the manager at once." },
+                    { key: "B", text: "He suggested seeing the manager at once." },
+                    { key: "C", text: "He insisted on seeing the manager at once." },
+                    { key: "D", text: "He threatened to see the manager at once." }
+                ],
+                correctKey: "C",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Tôi phải, tôi nhất định phải gặp quản lý ngay lập tức!'",
+                    vocab: [
+                        "A. estimate: ước lượng, đánh giá.",
+                        "B. suggest: gợi ý.",
+                        "C. insist on + V-ing: khăng khăng đòi hỏi, quyết tâm làm bằng được.",
+                        "D. threaten: đe dọa."
+                    ],
+                    whyCorrect: "Sự lặp lại nhấn mạnh của động từ khuyết thiếu 'must, I simply must' thể hiện một yêu cầu vô cùng quyết liệt và quả quyết từ người nói. Từ phù hợp nhất để tường thuật là 'insist on'.",
+                    whyIncorrect: "A, B, D không lột tả được mức độ khẩn thiết và tính kiên quyết, bắt buộc của câu nói."
+                }
+            },
+            {
+                id: 7,
+                task: 1,
+                prompt: "‘Please, please, don't tell anyone you've seen me!'",
+                options: [
+                    { key: "A", text: "He reminded me not to tell anyone I had seen him." },
+                    { key: "B", text: "He threatened me not to tell anyone I had seen him." },
+                    { key: "C", text: "He begged me not to tell anyone I had seen him." },
+                    { key: "D", text: "He accused me of telling someone I had seen him." }
+                ],
+                correctKey: "C",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Xin cậu, xin cậu đấy, đừng nói với bất kỳ ai rằng cậu đã nhìn thấy tớ!'",
+                    vocab: [
+                        "A. remind sb not to-V: nhắc nhở ai đừng làm gì.",
+                        "B. threaten sb: đe dọa ai đó.",
+                        "C. beg sb not to-V: van xin, cầu khẩn ai đó đừng làm gì.",
+                        "D. accuse sb of: buộc tội ai việc gì."
+                    ],
+                    whyCorrect: "Từ cầu khẩn lặp lại hai lần 'Please, please' biểu thị tâm trạng lo lắng khẩn thiết, cần sự giúp đỡ hoặc giữ bí mật từ người nghe. Động từ van nài 'beg' phản ánh chính xác nhất.",
+                    whyIncorrect: "A (remind) quá trung lập, không diễn tả được sự khẩn thiết. B và D hoàn toàn sai bản chất giao tiếp trong câu."
+                }
+            },
+            {
+                id: 8,
+                task: 1,
+                prompt: "‘That's right. Your flight's taking off at midnight.'",
+                options: [
+                    { key: "A", text: "He confirmed that my flight was taking off at midnight." },
+                    { key: "B", text: "He boasted about my flight taking off at midnight." },
+                    { key: "C", text: "He estimated that my flight was taking off at midnight." },
+                    { key: "D", text: "He reminded me that my flight is taking off at midnight." }
+                ],
+                correctKey: "A",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Đúng vậy. Chuyến bay của anh sẽ cất cánh vào lúc nửa đêm.'",
+                    vocab: [
+                        "A. confirm that + clause: xác nhận, chứng thực rằng thông tin nào đó là đúng.",
+                        "B. boast about: khoe khoang.",
+                        "C. estimate that: ước tính số liệu.",
+                        "D. remind sb that: nhắc nhở ai đó rằng..."
+                    ],
+                    whyCorrect: "Cụm khẳng định đồng ý 'That's right' thể hiện người nói đang phê duyệt hoặc chứng thực một thông tin đã được hỏi trước đó. Động từ 'confirm' là lựa chọn tối ưu.",
+                    whyIncorrect: "C sai vì lịch trình bay rõ ràng, không phải số liệu phỏng đoán. B hoàn toàn lạc đề."
+                }
+            },
+            {
+                id: 9,
+                task: 1,
+                prompt: "‘Don't forget to bring the binoculars, will you?'",
+                options: [
+                    { key: "A", text: "He suggested bringing the binoculars." },
+                    { key: "B", text: "He reminded me to bring the binoculars." },
+                    { key: "C", text: "He insisted on bringing the binoculars." },
+                    { key: "D", text: "He threatened me to bring the binoculars." }
+                ],
+                correctKey: "B",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Đừng quên mang theo ống nhòm đấy nhé, được không?'",
+                    vocab: [
+                        "A. suggest: gợi ý.",
+                        "B. remind sb to-V: nhắc nhở ai đó làm gì (giúp họ không quên).",
+                        "C. insist on: khăng khăng đòi.",
+                        "D. threaten: đe dọa."
+                    ],
+                    whyCorrect: "Cấu trúc câu mệnh lệnh phủ định 'Don't forget to + V' (Đừng quên làm việc gì) là dấu hiệu nhận biết trực quan nhất của hành động nhắc nhở, tương ứng với cấu trúc gián tiếp 'remind someone to do something'.",
+                    whyIncorrect: "Các đáp án A, C, D đều mang nét nghĩa khác, không biểu đạt được hành động nhắc nhở tránh bỏ quên đồ vật."
+                }
+            },
+            {
+                id: 10,
+                task: 1,
+                prompt: "‘I imagine Mexico City has about 20 million inhabitants by now, but I could be wrong.'",
+                options: [
+                    { key: "A", text: "He insisted that Mexico City had 20 million inhabitants." },
+                    { key: "B", text: "He estimated that Mexico City had about 20 million inhabitants by then." },
+                    { key: "C", text: "He boasted about the population of Mexico City." },
+                    { key: "D", text: "He confirmed the population of Mexico City." }
+                ],
+                correctKey: "B",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Tôi hình dung rằng Thành phố Mexico có khoảng 20 million dân vào lúc này, nhưng tôi có thể sai.'",
+                    vocab: [
+                        "A. insist: khăng khăng quả quyết.",
+                        "B. estimate that: ước tính, đưa ra con số mang tính dự đoán, xấp xỉ.",
+                        "C. boast: khoe khoang.",
+                        "D. confirm: xác nhận thông tin chính xác."
+                    ],
+                    whyCorrect: "Các từ nhận biết như 'I imagine' (tôi tưởng tượng/đoán) và 'but I could be wrong' (nhưng tôi có thể sai) cho thấy con số '20 million' chỉ là một ước lượng tương đối. Động từ 'estimate' là phù hợp nhất.",
+                    whyIncorrect: "A và D loại bỏ hoàn toàn tính chất không chắc chắn của người nói. C không có căn cứ ngữ cảnh."
+                }
+            },
+
+            // TASK 2 (Q11 - Q22)
+            {
+                id: 11,
+                task: 2,
+                prompt: "‘It's five o'clock already, you know.'",
+                options: [
+                    { key: "A", text: "He denied that it was five o'clock already." },
+                    { key: "B", text: "He pointed out that it was five o'clock already." },
+                    { key: "C", text: "He refused to know it was five o'clock already." },
+                    { key: "D", text: "He congratulated me on it being five o'clock already." }
+                ],
+                correctKey: "B",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Đã 5 giờ đúng rồi đấy, cậu biết mà.'",
+                    vocab: [
+                        "A. deny: phủ nhận.",
+                        "B. point out that + clause: vạch ra, chỉ ra, lưu ý ai đó về một thực tế khách quan.",
+                        "C. refuse: từ chối.",
+                        "D. congratulate sb on: chúc mừng ai về việc gì."
+                    ],
+                    whyCorrect: "Cụm từ đính kèm 'you know' chỉ ra người nói đang muốn hướng sự chú ý của người nghe vào một thông tin thực tế khách quan về mặt thời gian. Do đó, động từ 'point out' phản ánh chính xác hành động này.",
+                    whyIncorrect: "A mang nghĩa trái ngược. C sai cấu trúc cấu thành ý nghĩa. D không hợp lý vì mốc thời gian thông thường không dùng để chúc mừng."
+                }
+            },
+            {
+                id: 12,
+                task: 2,
+                prompt: "‘Yes, that's fine. I'll be able to help.'",
+                options: [
+                    { key: "A", text: "He agreed to help." },
+                    { key: "B", text: "He refused to help me." },
+                    { key: "C", text: "He added that he was able to help." },
+                    { key: "D", text: "He assured me to help." }
+                ],
+                correctKey: "A",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Vâng, như vậy ổn đấy. Tớ sẽ có thể giúp đỡ.'",
+                    vocab: [
+                        "A. agree to-V: đồng ý làm gì.",
+                        "B. refuse to-V: từ chối làm gì.",
+                        "C. add that: thêm vào rằng.",
+                        "D. assure sb + that clause (Đáp án D dùng 'assure me to help' là sai cấu trúc)."
+                    ],
+                    whyCorrect: "Từ 'Yes, that's fine' thể hiện sự chấp thuận, đồng thuận trước một lời đề nghị hoặc một tình huống. Cấu trúc 'agree to do something' thể hiện chính xác việc đồng ý giúp đỡ.",
+                    whyIncorrect: "B ngược nghĩa. C bỏ qua sắc thái đồng ý ở vế đầu. D dùng sai cấu trúc ngữ pháp của từ 'assure'."
+                }
+            },
+            {
+                id: 13,
+                task: 2,
+                prompt: "‘Don't worry, there'll be no difficulty, believe me.'",
+                options: [
+                    { key: "A", text: "He blamed me for having difficulties." },
+                    { key: "B", text: "He warned me about the upcoming difficulty." },
+                    { key: "C", text: "He assured me that there would be no difficulty." },
+                    { key: "D", text: "He thanked me for resolving the difficulty." }
+                ],
+                correctKey: "C",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Đừng lo lắng, sẽ không có khó khăn gì đâu, tin tớ đi.'",
+                    vocab: [
+                        "A. blame sb for: đổ lỗi cho ai.",
+                        "B. warn sb about: cảnh báo ai về điều gì.",
+                        "C. assure sb that + clause: quả quyết, cam đoan, trấn an ai đó rằng điều tốt đẹp sẽ xảy ra.",
+                        "D. thank sb for: cảm ơn ai vì điều gì."
+                    ],
+                    whyCorrect: "Lời nói 'Don't worry' (Đừng lo) kết hợp cụm 'believe me' (tin tôi đi) mang tính chất trấn an, tạo dựng lòng tin mạnh mẽ cho đối phương. Hành động này được mô tả chuẩn xác bằng từ 'assure'.",
+                    whyIncorrect: "A, B trái ngược hoàn toàn sắc thái (đổ lỗi/cảnh báo khó khăn). D sai ngữ cảnh thực tế."
+                }
+            },
+            {
+                id: 14,
+                task: 2,
+                prompt: "‘How kind of you to bring me the flowers!'",
+                options: [
+                    { key: "A", text: "He congratulated me on bringing him the flowers." },
+                    { key: "B", text: "He thanked me for bringing him the flowers." },
+                    { key: "C", text: "He advised me to bring him the flowers." },
+                    { key: "D", text: "He admitted bringing him the flowers." }
+                ],
+                correctKey: "B",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Cậu thật tốt bụng khi mang hoa đến tặng tớ!'",
+                    vocab: [
+                        "A. congratulate sb on: chúc mừng ai.",
+                        "B. thank sb for + V-ing: cảm ơn ai đó vì đã làm điều gì cho mình.",
+                        "C. advise sb to-V: khuyên bảo ai.",
+                        "D. admit + V-ing: thừa nhận làm gì."
+                    ],
+                    whyCorrect: "Mẫu câu cảm thán khen ngợi hành động tử tế của đối phương 'How kind of you to + V' chính là một cách biểu đạt lời cảm ơn sâu sắc. Cấu trúc gián tiếp đi kèm: 'thank someone for doing something'.",
+                    whyIncorrect: "Các động từ khác không mang ý nghĩa tri ân hay cảm ơn đối với món quà được tặng."
+                }
+            },
+            {
+                id: 15,
+                task: 2,
+                prompt: "‘If I were you, I'd keep it under my hat.'",
+                options: [
+                    { key: "A", text: "He advised me to keep it under my hat." },
+                    { key: "B", text: "He warned me not to keep it under my hat." },
+                    { key: "C", text: "He pointed out that I should keep it under my hat." },
+                    { key: "D", text: "He assured me to keep it under my hat." }
+                ],
+                correctKey: "A",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Nếu tớ là cậu, tớ sẽ giữ bí mật chuyện đó (giữ nó dưới mũ).'",
+                    vocab: [
+                        "A. advise sb to-V: khuyên nhủ ai đó nên làm gì.",
+                        "B. warn sb not to-V: cảnh báo ai đừng làm gì.",
+                        "C. point out: chỉ ra thực tế.",
+                        "D. 'keep it under one's hat' (idiom): giữ kín bí mật, không tiết lộ."
+                    ],
+                    whyCorrect: "Cấu trúc câu điều kiện loại 2 mở đầu bằng cụm 'If I were you, I would + V...' là công thức đưa ra lời khuyên một cách tinh tế. Do đó tường thuật lại bằng động từ 'advise' là chính xác nhất.",
+                    whyIncorrect: "B sai vì câu gốc khuyên 'nên giữ bí mật' chứ không phải 'cảnh báo đừng giữ bí mật'."
+                }
+            },
+            {
+                id: 16,
+                task: 2,
+                prompt: "‘...and another thing, there'll be a 2% surcharge.'",
+                options: [
+                    { key: "A", text: "He admitted that there would be a 2% surcharge." },
+                    { key: "B", text: "He added that there would be a 2% surcharge." },
+                    { key: "C", text: "He denied that there would be a 2% surcharge." },
+                    { key: "D", text: "He agreed that there was a 2% surcharge." }
+                ],
+                correctKey: "B",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: '...và một điều nữa là, sẽ có thêm khoản phụ phí 2%.'",
+                    vocab: [
+                        "A. admit: thừa nhận lỗi lầm/sự thật.",
+                        "B. add that + clause: bổ sung thêm thông tin, nói thêm rằng.",
+                        "C. deny: phủ nhận.",
+                        "D. agree: đồng ý."
+                    ],
+                    whyCorrect: "Cụm liên từ mở đầu 'and another thing' (và một điều nữa/thêm vào đó) thể hiện rõ ràng người nói đang bổ sung thêm thông tin mới vào cuộc hội thoại hiện tại. Động từ phù hợp nhất là 'add'.",
+                    whyIncorrect: "Các đáp án khác như thừa nhận (admit) hay phủ nhận (deny) không diễn tả được hành động bổ sung thông tin này."
+                }
+            },
+            {
+                id: 17,
+                task: 2,
+                prompt: "‘I didn't do it! I didn't rob the old lady!'",
+                options: [
+                    { key: "A", text: "He refused to rob the old lady." },
+                    { key: "B", text: "He denied robbing the old lady." },
+                    { key: "C", text: "He blamed Charlotte for robbing the old lady." },
+                    { key: "D", text: "He admitted robbing the old lady." }
+                ],
+                correctKey: "B",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Tôi không làm việc đó! Tôi không hề cướp của bà cụ!'",
+                    vocab: [
+                        "A. refuse to-V: từ chối làm gì (trong tương lai).",
+                        "B. deny + V-ing: phủ nhận việc đã làm (trong quá khứ).",
+                        "C. blame sb for: đổ lỗi cho ai.",
+                        "D. admit + V-ing: thừa nhận đã làm gì."
+                    ],
+                    whyCorrect: "Câu phát biểu đanh thép 'I didn't do it! I didn't rob...' thể hiện hành động từ chối cáo buộc, khẳng định mình không thực hiện vụ cướp. Công thức phù hợp: 'deny + V-ing'.",
+                    whyIncorrect: "A sai vì 'refuse' là từ chối thực hiện một lời yêu cầu chứ không phải phủ nhận tội danh đã xảy ra. D mang nghĩa ngược hoàn toàn."
+                }
+            },
+            {
+                id: 18,
+                task: 2,
+                prompt: "‘No, I'm afraid I'm not prepared to make a speech.'",
+                options: [
+                    { key: "A", text: "He refused to make a speech." },
+                    { key: "B", text: "He denied making a speech." },
+                    { key: "C", text: "He advised me not to make a speech." },
+                    { key: "D", text: "He assured that he wouldn't make a speech." }
+                ],
+                correctKey: "A",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Không, tôi e rằng tôi chưa sẵn sàng/không chấp nhận đưa ra một bài phát biểu đâu.'",
+                    vocab: [
+                        "A. refuse to-V: khước từ, từ chối không làm một việc được yêu cầu.",
+                        "B. deny: phủ nhận.",
+                        "C. advise: khuyên bảo.",
+                        "D. assure: cam đoan."
+                    ],
+                    whyCorrect: "Cụm từ từ chối 'No' đi kèm lý do 'I'm not prepared to...' (tôi không sẵn lòng/chưa chuẩn bị để...) thể hiện việc khước từ một lời mời làm người phát biểu. Do đó dùng cấu trúc 'refuse to do something'.",
+                    whyIncorrect: "B sai vì người nói không phủ nhận một việc trong quá khứ mà đang khước từ một hành động ở hiện tại/tương lai."
+                }
+            },
+            {
+                id: 19,
+                task: 2,
+                prompt: "‘Be careful when you cross the road, won't you?'",
+                options: [
+                    { key: "A", text: "He advised me crossing the road carefully." },
+                    { key: "B", text: "He warned me to be careful when crossing the road." },
+                    { key: "C", text: "He suggested me to be careful when crossing the road." },
+                    { key: "D", text: "He blamed me for not crossing the road carefully." }
+                ],
+                correctKey: "B",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Hãy cẩn thận khi sang đường đấy nhé, được không?'",
+                    vocab: [
+                        "A. advise sb to-V (Đáp án A dùng 'advise me crossing' là sai ngữ pháp).",
+                        "B. warn sb to-V/about...: cảnh báo, dặn dò ai đó coi chừng mối nguy hiểm tiềm ẩn.",
+                        "C. suggest + V-ing (Đáp án C dùng 'suggest me to be' là sai cấu trúc).",
+                        "D. blame sb for: đổ lỗi."
+                    ],
+                    whyCorrect: "Lời dặn bảo 'Be careful when...' nhắm tới việc phòng tránh tai nạn giao thông nguy hiểm khi băng qua đường, mang tính chất cảnh báo an toàn. Cấu trúc 'warn someone to do something' là chuẩn nhất.",
+                    whyIncorrect: "A và C sai cấu trúc ngữ pháp cơ bản của động từ 'advise' và 'suggest'. D sai bản chất ngữ cảnh."
+                }
+            },
+            {
+                id: 20,
+                task: 2,
+                prompt: "‘Well done! You've passed the test first time!'",
+                options: [
+                    { key: "A", text: "He thanked me for passing the test first time." },
+                    { key: "B", text: "He congratulated me on passing the test first time." },
+                    { key: "C", text: "He praised me to pass the test first time." },
+                    { key: "D", text: "He assured me that I passed the test first time." }
+                ],
+                correctKey: "B",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Làm tốt lắm! Cậu đã vượt qua bài kiểm tra ngay trong lần đầu tiên rồi!'",
+                    vocab: [
+                        "A. thank sb for: cảm ơn ai.",
+                        "B. congratulate sb on + V-ing: chúc mừng ai đó vì đã đạt được thành tựu, thành công gì.",
+                        "C. praise sb for V-ing (Đáp án C dùng 'praise me to pass' là sai cấu trúc).",
+                        "D. assure: quả quyết."
+                    ],
+                    whyCorrect: "Từ khen ngợi tán dương 'Well done!' (Làm tốt lắm!) dùng để tuyên dương và chúc mừng một thành tích xuất sắc vừa đạt được. Cấu trúc gián tiếp bắt buộc: 'congratulate someone on doing something'.",
+                    whyIncorrect: "A sai sắc thái. C dùng sai cấu trúc giới từ đi kèm với động từ 'praise'."
+                }
+            },
+            {
+                id: 21,
+                task: 2,
+                prompt: "‘I'm sure it was Charlotte who let us down.'",
+                options: [
+                    { key: "A", text: "He denied Charlotte letting them down." },
+                    { key: "B", text: "He blamed Charlotte for letting them down." },
+                    { key: "C", text: "He accused Charlotte to let them down." },
+                    { key: "D", text: "He admitted that Charlotte let them down." }
+                ],
+                correctKey: "B",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Tôi chắc chắn rằng chính Charlotte là người đã làm chúng ta thất vọng.'",
+                    vocab: [
+                        "A. deny: phủ nhận.",
+                        "B. blame sb for + V-ing: đổ lỗi, quy trách nhiệm cho ai về một sự việc không tốt đã xảy ra.",
+                        "C. accuse sb of V-ing (Đáp án C dùng 'accuse Charlotte to let' là sai cấu trúc ngữ pháp).",
+                        "D. 'let sb down' (phrasal verb): làm ai đó thất vọng."
+                    ],
+                    whyCorrect: "Việc khẳng định lỗi thuộc về một người cụ thể 'it was Charlotte who...' cho một kết quả tiêu cực ('let us down') cấu thành hành động đổ lỗi. Công thức áp dụng: 'blame someone for doing something'.",
+                    whyIncorrect: "C sai cấu trúc nghiêm trọng vì 'accuse' phải đi với giới từ 'of'. A ngược nghĩa hoàn toàn."
+                }
+            },
+            {
+                id: 22,
+                task: 2,
+                prompt: "‘Yes, it was my fault. I caused the accident.'",
+                options: [
+                    { key: "A", text: "He denied causing the accident." },
+                    { key: "B", text: "He refused to cause the accident." },
+                    { key: "C", text: "He admitted causing the accident." },
+                    { key: "D", text: "He blamed himself to cause the accident." }
+                ],
+                correctKey: "C",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Phải, đó là lỗi của tôi. Tôi đã gây ra vụ tai nạn.'",
+                    vocab: [
+                        "A. deny: phủ nhận.",
+                        "B. refuse: từ chối.",
+                        "C. admit + V-ing: thừa nhận bản thân đã làm lỗi lầm hoặc một việc gì đó.",
+                        "D. blame oneself for V-ing (Đáp án D sai cấu trúc)."
+                    ],
+                    whyCorrect: "Từ xác nhận 'Yes, it was my fault' (Phải, là lỗi của tôi) thể hiện tinh thần nhận trách nhiệm, không trốn tránh hành vi sai sót do mình gây ra. Công thức chuẩn xác: 'admit + V-ing'.",
+                    whyIncorrect: "A trái ngược hoàn toàn nghĩa gốc. B không phù hợp thì và ngữ cảnh. D dùng sai cấu trúc của động từ 'blame'."
+                }
+            },
+
+            // SECTION II: TRANSFORMATION (Q23 - Q27)
+            {
+                id: 23,
+                task: 3,
+                prompt: "‘You've passed the exam? Oh, well done!' my aunt said to me. (ON)<br>→ My aunt ....................................................................................... the exam.",
+                options: [
+                    { key: "A", text: "My aunt congratulated me to pass" },
+                    { key: "B", text: "My aunt congratulated me on passing" },
+                    { key: "C", text: "My aunt congratulated on my passing" },
+                    { key: "D", text: "My aunt congratulated me for passing" }
+                ],
+                correctKey: "B",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Cháu đã thi đỗ rồi à? Ôi, làm tốt lắm!' dì tôi nói với tôi.",
+                    vocab: [
+                        "Cấu trúc cố định bắt buộc với từ gợi ý ON:",
+                        "Congratulate + sb + ON + V-ing: Chúc mừng ai đó vì đã đạt được thành tích gì."
+                    ],
+                    whyCorrect: "Cụm từ hoàn chỉnh điền vào khoảng trống gồm 4 từ 'congratulated me on passing' đáp ứng hoàn hảo yêu cầu số lượng từ (từ 3 đến 8 từ) và sử dụng đúng từ khóa 'ON'.",
+                    whyIncorrect: "A, C, D đều vi phạm quy tắc kết hợp giới từ của động từ 'congratulate' trong tiếng Anh quốc tế (không dùng TO-V, FOR hoặc lược bỏ tân ngữ)."
+                }
+            },
+            {
+                id: 24,
+                task: 3,
+                prompt: "‘I’m sorry I forgot to set the security alarm,' said the receptionist. (FOR)<br>→ The receptionist.................................................................set the security alarm.",
+                options: [
+                    { key: "A", text: "The receptionist apologized for forgetting to" },
+                    { key: "B", text: "The receptionist apologized for to forget to" },
+                    { key: "C", text: "The receptionist blamed herself for forgetting to" },
+                    { key: "D", text: "The receptionist said sorry for forget to" }
+                ],
+                correctKey: "A",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Tôi xin lỗi vì tôi đã quên cài đặt báo động an ninh,' người lễ tân nói.",
+                    vocab: [
+                        "Cấu trúc xin lỗi đi kèm từ khóa gợi ý FOR:",
+                        "Apologize (to sb) + FOR + V-ing: Xin lỗi vì hành vi nào đó.",
+                        "Forget + to-V: Quên phải làm một nhiệm vụ gì."
+                    ],
+                    whyCorrect: "Cụm từ điền vào chỗ trống gồm 4 từ 'apologized for forgetting to' kết hợp mượt mà với phần đuôi có sẵn 'set the security alarm' tạo nên câu đúng ngữ pháp tuyệt đối.",
+                    whyIncorrect: "B sai vì sau giới từ 'for' không thể dùng 'to-V'. C đổi sai động từ cốt lõi mang sắc thái xin lỗi. D không trang trọng và sai dạng động từ 'forget'."
+                }
+            },
+            {
+                id: 25,
+                task: 3,
+                prompt: "‘Why don't you postpone your trip till the autumn, Jim?' suggested Sarah. (OFF)<br>→ Sarah suggested......................................................................... till the autumn.",
+                options: [
+                    { key: "A", text: "Sarah suggested Jim to put off his trip" },
+                    { key: "B", text: "Sarah suggested that Jim put off his trip" },
+                    { key: "C", text: "Sarah suggested putting off Jim's trip" },
+                    { key: "D", text: "Sarah suggested that Jim postpones off his trip" }
+                ],
+                correctKey: "B",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Tại sao bạn không hoãn chuyến đi của mình cho đến mùa thu hả Jim?' Sarah gợi ý.",
+                    vocab: [
+                        "Phrasal verb: Put off = Postpone (trì hoãn).",
+                        "Cấu trúc giả định với từ suggest:",
+                        "Suggest + that + S + V-inf (động từ nguyên mẫu không chia)."
+                    ],
+                    whyCorrect: "Cụm điền 'that Jim put off his trip' gồm 6 từ (nằm trong giới hạn từ 3-8 từ), áp dụng chính xác cấu trúc giả định Subjunctive (động từ 'put' ở dạng nguyên mẫu không chia) và thay thế cụm từ đồng nghĩa 'put off' cho từ gợi ý 'OFF'.",
+                    whyIncorrect: "A sai vì 'suggest' không bao giờ đi với cấu trúc 'sb to V'. C đổi ngôi và cấu trúc khiến nghĩa không tự nhiên bằng dạng mệnh đề mệnh lệnh gián tiếp. D phối hợp từ thừa thãi và chia sai thì động từ."
+                }
+            },
+            {
+                id: 26,
+                task: 3,
+                prompt: "‘Don't forget to enclose a cheque, will you?' the clerk said to me. (IN)<br>→ The clerk reminded ..................................................................... the envelope.",
+                options: [
+                    { key: "A", text: "The clerk reminded me to put a cheque in" },
+                    { key: "B", text: "The clerk reminded me to enclose a cheque in" },
+                    { key: "C", text: "The clerk reminded not to forget to put a cheque in" },
+                    { key: "D", text: "The clerk reminded me putting a cheque in" }
+                ],
+                correctKey: "A",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Đừng quên đính kèm một tờ séc bên trong nhé, được không?' người thư ký nói với tôi.",
+                    vocab: [
+                        "Cấu trúc nhắc nhở: Remind + sb + to-V: Nhắc nhở ai đó làm việc gì.",
+                        "Hành động 'enclose a cheque' (đính kèm tờ séc bên trong thư) đồng nghĩa với cụm từ hành động 'put a cheque in' (bỏ tờ séc vào trong)."
+                    ],
+                    whyCorrect: "Cụm từ điền vào 'me to put a cheque in' chứa 6 từ hợp lệ, tích hợp từ khóa 'IN' để tạo thành cấu trúc giới từ chỉ vị trí bên trong phong bì ('in the envelope').",
+                    whyIncorrect: "B kém tự nhiên về mặt ngữ nghĩa idioms. C bỏ sót tân ngữ bắt buộc 'me' của cấu trúc gốc. D sử dụng sai dạng thức danh động từ V-ing sau cấu trúc 'remind'."
+                }
+            },
+            {
+                id: 27,
+                task: 3,
+                prompt: "‘It's a good idea to rehearse your speech in front of a mirror,' George told me. (RUN)<br>→ George advised.................................................................in front of a mirror.",
+                options: [
+                    { key: "A", text: "George advised me running through my speech" },
+                    { key: "B", text: "George advised me to run through my speech" },
+                    { key: "C", text: "George advised to run through my speech" },
+                    { key: "D", text: "George advised me to run off my speech" }
+                ],
+                correctKey: "B",
+                explanation: {
+                    translation: "Dịch nghĩa câu gốc: 'Cậu nên luyện tập thử bài phát biểu của mình trước gương đi, đó là một ý kiến hay đấy,' George nói với tôi.",
+                    vocab: [
+                        "Cấu trúc khuyên bảo: Advise + sb + to-V: Khuyên ai đó làm việc gì.",
+                        "Phrasal verb đồng nghĩa từ gợi ý RUN:",
+                        "Run through = Rehearse (nhẩm lại, đọc thử, luyện tập duyệt qua trước)."
+                    ],
+                    whyCorrect: "Cụm từ điền 'me to run through my speech' bao gồm 6 từ chính xác, chuyển đổi tài tình từ động từ 'rehearse' sang cụm 'run through' sử dụng trọn vẹn từ khóa quy định.",
+                    whyIncorrect: "A sai vì 'advise' không dùng trực tiếp dạng V-ing khi có tân ngữ chỉ người. C thiếu thành phần tân ngữ tiếp nhận lời khuyên. D sai phrasal verb."
+                }
+            }
+        ];
+
+        // Công cụ tạo âm thanh trực tiếp (Web Audio API Synthesizer Engine)
+        const audioCtxInstance = new (window.AudioContext || window.webkitAudioContext)();
+
+        function playGamificationSound(status) {
+            if (audioCtxInstance.state === 'suspended') {
+                audioCtxInstance.resume();
+            }
+            const oscillator = audioCtxInstance.createOscillator();
+            const gainNode = audioCtxInstance.createGain();
+            oscillator.connect(gainNode);
+            gainNode.connect(audioCtxInstance.destination);
+
+            if (status === 'correct') {
+                // Âm thanh 'Ding' ngân vang trong trẻo vui tai
+                oscillator.type = 'sine';
+                oscillator.frequency.setValueAtTime(523.25, audioCtxInstance.currentTime); // Đốt C5
+                oscillator.frequency.setValueAtTime(783.99, audioCtxInstance.currentTime + 0.08); // Nốt G5
+                gainNode.gain.setValueAtTime(0.2, audioCtxInstance.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtxInstance.currentTime + 0.35);
+                oscillator.start();
+                oscillator.stop(audioCtxInstance.currentTime + 0.35);
+            } else if (status === 'wrong') {
+                // Âm thanh 'Téo teo tèo' / 'Oh no' trầm ấm, hài hước giảm bớt áp lực
+                oscillator.type = 'triangle';
+                oscillator.frequency.setValueAtTime(220.00, audioCtxInstance.currentTime); // Nốt A3
+                oscillator.frequency.linearRampToValueAtTime(130.81, audioCtxInstance.currentTime + 0.4); // Nốt C3
+                gainNode.gain.setValueAtTime(0.25, audioCtxInstance.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtxInstance.currentTime + 0.45);
+                oscillator.start();
+                oscillator.stop(audioCtxInstance.currentTime + 0.45);
+            }
+        }
+
+        // Hệ thống hiệu ứng Pháo giấy Confetti bằng Canvas HTML5 thuần
+        const canvas = document.getElementById('confetti-canvas');
+        const ctx = canvas.getContext('2d');
+        let confettiStorage = [];
+
+        function updateCanvasDimensions() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', updateCanvasDimensions);
+        updateCanvasDimensions();
+
+        function launchConfettiBurst() {
+            confettiStorage = [];
+            for (let i = 0; i < 100; i++) {
+                confettiStorage.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height - canvas.height,
+                    r: Math.random() * 6 + 4,
+                    d: Math.random() * canvas.height,
+                    color: `hsl(${Math.random() * 360}, 100%, 60%)`,
+                    tilt: Math.random() * 10 - 5,
+                    tiltAngleIncremental: Math.random() * 0.06 + 0.02,
+                    tiltAngle: 0
+                });
+            }
+            renderConfettiAnimation();
+        }
+
+        function renderConfettiAnimation() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            let checkActive = false;
+            confettiStorage.forEach((p) => {
+                p.tiltAngle += p.tiltAngleIncremental;
+                p.y += (Math.cos(p.d) + 3 + p.r / 2) / 2;
+                p.x += Math.sin(p.tiltAngle);
+                p.tilt = Math.sin(p.tiltAngle - p.r / 2) * 5;
+
+                if (p.y <= canvas.height) checkActive = true;
+
+                ctx.beginPath();
+                ctx.lineWidth = p.r;
+                ctx.strokeStyle = p.color;
+                ctx.moveTo(p.x + p.tilt + p.r / 2, p.y);
+                ctx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r / 2);
+                ctx.stroke();
+            });
+            if (checkActive) {
+                requestAnimationFrame(renderConfettiAnimation);
+            } else {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+        }
+
+        // Thuật toán xáo trộn ngẫu nhiên mảng Fisher-Yates (Shuffle Array)
+        function shuffleOptions(array) {
+            let index = array.length, temporaryValue, randomIndex;
+            while (0 !== index) {
+                randomIndex = Math.floor(Math.random() * index);
+                index -= 1;
+                temporaryValue = array[index];
+                array[index] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+            return array;
+        }
+
+        // Trạng thái lưu trữ kết quả của học sinh làm bài
+        let trackingUserScores = {};
+
+        // Trình dựng và hiển thị câu hỏi lên màn hình
+        function mountQuizApplication() {
+            const wrapper1 = document.getElementById('task1-wrapper');
+            const wrapper2 = document.getElementById('task2-wrapper');
+            const wrapperSec2 = document.getElementById('section2-wrapper');
+            
+            wrapper1.innerHTML = "";
+            wrapper2.innerHTML = "";
+            wrapperSec2.innerHTML = "";
+
+            masterQuizData.forEach((question, index) => {
+                trackingUserScores[question.id] = null; // Khởi tạo giá trị rỗng
+
+                // Xáo trộn đáp án ngẫu nhiên mỗi lần tải lại trang
+                const mixedOptions = shuffleOptions([...question.options]);
+
+                const cardBlock = document.createElement('div');
+                cardBlock.className = 'quiz-card';
+                cardBlock.id = `quiz-card-${question.id}`;
+
+                let optionsLayoutHTML = "";
+                mixedOptions.forEach((opt) => {
+                    optionsLayoutHTML += `
+                        <button class="option-btn" id="btn-opt-${question.id}-${opt.key}" onclick="evaluateUserChoice(${question.id}, '${opt.key}', '${question.correctKey}')">
+                            <strong>${opt.key}.</strong> ${opt.text}
+                        </button>
+                    `;
+                });
+
+                cardBlock.innerHTML = `
+                    <div class="question-header">
+                        <span class="badge">Câu ${index + 1}</span>
+                        <div class="question-text">${question.prompt}</div>
+                    </div>
+                    <div class="options-grid">
+                        ${optionsLayoutHTML}
+                    </div>
+                    <div class="explanation-box" id="explanation-${question.id}">
+                        <div class="exp-title">💡 GIẢI THÍCH CHI TIẾT TỪ MS LÊ HẰNG ENGLISH:</div>
+                        <div class="exp-section"><strong>Bước 1: Dịch nghĩa toàn bộ câu hỏi:</strong><br>${question.explanation.translation}</div>
+                        <div class="exp-section">
+                            <strong>Bước 2: Liệt kê và dịch nghĩa các đáp án lựa chọn:</strong>
+                            <div class="sub-options-desc">
+                                ${question.explanation.vocab.join('<br>')}
+                            </div>
+                        </div>
+                        <div class="exp-section"><strong>Bước 3: Tại sao đáp án [${question.correctKey}] đúng:</strong><br>${question.explanation.whyCorrect}</div>
+                        <div class="exp-section"><strong>Bước 4: Tại sao các đáp án còn lại SAI:</strong><br>${question.explanation.whyIncorrect}</div>
+                    </div>
+                `;
+
+                // Định tuyến vị trí hiển thị dựa vào mã Task
+                if (question.task === 1) {
+                    wrapper1.appendChild(cardBlock);
+                } else if (question.task === 2) {
+                    wrapper2.appendChild(cardBlock);
+                } else {
+                    wrapperSec2.appendChild(cardBlock);
+                }
+            });
+        }
+
+        // Hàm xử lý tương tác trực tiếp khi học sinh click vào đáp án
+        function evaluateUserChoice(questionId, userKey, correctKey) {
+            // Ngăn chặn bấm lại nhiều lần khi đã chọn xong
+            if (trackingUserScores[questionId] !== null) return;
+
+            const parentCard = document.getElementById(`quiz-card-${questionId}`);
+            const selectedButton = document.getElementById(`btn-opt-${questionId}-${userKey}`);
+            const targetCorrectButton = document.getElementById(`btn-opt-${questionId}-${correctKey}`);
+            const textExplanationBox = document.getElementById(`explanation-${questionId}`);
+
+            // Khóa tương tác của tất cả các nút trong câu hỏi hiện tại
+            const allSiblingButtons = parentCard.querySelectorAll('.option-btn');
+            allSiblingButtons.forEach(button => button.classList.add('disabled'));
+
+            if (userKey === correctKey) {
+                // Xử lý khi chọn ĐÚNG
+                trackingUserScores[questionId] = true;
+                selectedButton.classList.add('correct');
+                playGamificationSound('correct');
+                launchConfettiBurst();
+            } else {
+                // Xử lý khi chọn SẠI
+                trackingUserScores[questionId] = false;
+                selectedButton.classList.add('wrong');
+                targetCorrectButton.classList.add('correct'); // Gợi ý hiển thị đáp án đúng luôn
+                parentCard.classList.add('shake');
+                playGamificationSound('wrong');
+                // Xóa bỏ class hiệu ứng sau khi hoàn tất để có thể kích hoạt lại nếu cần
+                setTimeout(() => parentCard.classList.remove('shake'), 450);
+            }
+
+            // HIỂN THỊ GIẢI THÍCH LẬP TỨC NGAY SAU KHI CHỌN (QUAN TRỌNG NHẤT)
+            textExplanationBox.style.display = "block";
+        }
+
+        // Logic xử lý nút tính điểm tổng kết toàn bài thi
+        function checkFinalQuizResults() {
+            let maxTotalQuestions = masterQuizData.length;
+            let currentCorrectCount = 0;
+            let totalAnsweredCount = 0;
+
+            for (const key in trackingUserScores) {
+                if (trackingUserScores[key] !== null) {
+                    totalAnsweredCount++;
+                    if (trackingUserScores[key] === true) {
+                        currentCorrectCount++;
+                    }
+                }
+            }
+
+            // Kiểm tra bảo vệ nếu học sinh chưa hoàn thành đầy đủ
+            if (totalAnsweredCount < maxTotalQuestions) {
+                alert(`Con ơi, con chưa làm hết các câu hỏi đâu nè! Hãy cuộn lên xem kỹ phần giải thích và chọn đáp án đầy đủ ${totalAnsweredCount}/${maxTotalQuestions} câu trước khi nộp bài nhé! 💕`);
+                return;
+            }
+
+            const rawCalculatedPercentage = (currentCorrectCount / maxTotalQuestions) * 100;
+            let conditionalCommentary = "";
+
+            if (rawCalculatedPercentage < 50) {
+                conditionalCommentary = "Điểm lần này chưa cao lắm, con cố gắng đọc kỹ giải thích đáp án và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!";
+            } else if (rawCalculatedPercentage >= 60 && rawCalculatedPercentage <= 80) {
+                conditionalCommentary = "Con đã có tiến bộ khá ổn rồi, con cố gắng đọc kỹ giải thích đáp án và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!";
+            } else if (rawCalculatedPercentage >= 90) {
+                conditionalCommentary = "Làm tốt lắm, con cố gắng rinh điểm 10 ở lần sau nha!";
+            } else {
+                // Dự phòng trường hợp điểm số rơi vào khoảng giữa 50% - 60%
+                conditionalCommentary = "Con đã nắm được hòm hòm kiến thức rồi đó! Hãy đọc kỹ ghi chú của cô Lê Hằng để rinh điểm tối đa ở lượt làm bài kế tiếp nhé!";
+            }
+
+            // Ghi nhận văn bản dữ liệu lên Popup
+            document.getElementById('score-text').innerText = `${currentCorrectCount} / ${maxTotalQuestions}`;
+            document.getElementById('comment-text').innerText = `Lời khuyên từ Ms Lê Hằng: "${conditionalCommentary}"`;
+            
+            // Kích hoạt hiển thị khung thông báo tổng kết
+            document.getElementById('result-modal').classList.add('show');
+            if(rawCalculatedPercentage >= 60) {
+                launchConfettiBurst();
+            }
+        }
+
+        function closePopupLayout() {
+            document.getElementById('result-modal').classList.remove('show');
+        }
+
+        function resetQuizEngine() {
+            closePopupLayout();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            mountQuizApplication();
+        }
+
+        // Kích hoạt khởi chạy ứng dụng khi tải trang hoàn tất
+        window.onload = function() {
+            mountQuizApplication();
+        };
+    </script>
+</body>
+</html>
